@@ -27,8 +27,8 @@
 
 <body>
 
-<div id="header">
-  <h1> Resonance </h1>
+<div id="header"> 
+  <h1>Resonance: Event-Driven Control for Software-Defined Networks</h1>
 </div>
 <div id="wrapper">
   <div id="firstcol">
@@ -73,27 +73,48 @@
   </div>
   <div id="secondcol">
     <h2>PyResonance</h2>
-    <p> Resonance currently supports expression of policy in four domains that
-    inherently capture many events: time, user, history, and traffic flow.
-    Resonance can support policies that automatically react to a wide range of
-    events, from fluctuations in traffic volumes to changes in the time of day.
-    Resonance allows network operators to specify network-wide policies in
-    terms of a high-level, event-driven policy model, as opposed to configuring
-    individual network devices with low-level commands.  </p>
+    <p> PyResonance is <b>Resonance implemented in <a
+    href="http://www.frenetic-lang.org/pyretic/" target="_blank">Pyretic</a> language</b>.
+    Originally, Resonance was implemented in the NOX platform (specifically, in
+    C++), which runs fair in many situations (e.g., campus and home networks).
+    However, programming in the NOX platform is not a trivial task. First of
+    all, even buidling a simple controller program requires multiple steps of
+    setting up the environment while the platform does not provide any useful
+    pre-built, high level APIs to programmers. In addition,  code readability
+    is low in general for NOX controller programs.  Hence, NOX sets a high bar
+    for anyone (e.g., operators, reseachers) who wants to implement or
+    understand a Resonance controller with complex policies.</p>
+
+    <p> In contrast, Pyretic provides a programmer-friendly environment with
+    high-level APIs and a domain-specific language embedded in Python. We have
+    augmented the original Pyretic codebase with many useful features to
+    present an attractive and engaging environment for implementing Resonance
+    controllers with ease. Moreover, Pyretic's modular programming model allows
+    programmers to build a complex network policy by composing multiple network
+    policies (or FSMs) together (sequentially or parallely).</p>
+    
+    <p>PyResonance opens a
+    great opportunity to express and enforce network policies that were not
+    easy, if not impossible, in a much simpler fashion with significantly less
+    number of lines of code.</p>
 
     <h2>Code and Documentation</h2>
       <ul>
-        <li><a href="https://github.com/hyojoonkim/resonance-pyretic">Github repository</a></li>
+        <li><a href="https://github.com/hyojoonkim/resonance-pyretic">PyResonance Github repository</a></li>
         <li><a href="https://github.com/hyojoonkim/resonance-pyretic/wiki">Wiki and Documenation</a></li>
       </ul>
 
+    <h2>Support & Questions</h2>
+    <p> For any questions, please contact Hyojoon (Joon) Kim via email:<br>
+        <b>joonk AT gatech DOT edu</b>
     <h2>People</h2>
       <ul>
         <li><a href="http://www.cc.gatech.edu/~hkim368/">Hyojoon Kim</a></li>
-        <li><a href="http://www.cc.gatech.edu/~feamster/">Nick Feamster</a></li>
-        <li><a href="http://www.cs.princeton.edu/~jreich/">Joshua Reich</a> (Postdoc, Princeton)</li>
-	      <li><a href="http://bebop.cs.yale.edu/~andreas/">Andreas Voellmy</li>
+        <li><a href="http://www.cc.gatech.edu/~agupta80/">Arpit Gupta</a></li>
+	<li><a href="http://bebop.cs.yale.edu/~andreas/">Andreas Voellmy</li>
         <li><a href="http://www.cc.gatech.edu/~marshini/">Marshini Chetty</a> </li>
+        <li><a href="http://www.cc.gatech.edu/~feamster/">Nick Feamster</a></li>
+    <!--    <li><a href="http://www.cs.princeton.edu/~jreich/">Joshua Reich</a> (Postdoc, Princeton)</li> -->
       </ul>
 
   </div>

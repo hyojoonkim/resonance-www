@@ -7,29 +7,29 @@ body {
 }
 
 #header {
-    width: 680px;
-    margin: 0px auto;
-    text-align: center;
+    margin-left:7%;
+    width:50%
+    margin: 0px;
     padding: 1em;
+    text-align: left;
     background-color: #fff;
 }
 
 #wrapper {
     margin: 0px;
     padding: 3em;
-
 }
 
 #firstcol {
     margin-left:5%;
-    width:50%;
+    width:45%;
     background-color: #fff;
     float:left;
     text-align: left;
 }
 
 #secondcol {
-    margin-left:60%;
+    margin-left:55%;
     background-color: #fff;
     text-align: left;
 }
