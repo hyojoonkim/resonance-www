@@ -1,6 +1,4 @@
 body {
-    text-align: center;
-    background-color: #ddd;
     font-family: arial, sans-serif;
     padding: 0px;
     margin: 0px;
@@ -12,26 +10,29 @@ body {
     width: 680px;
     margin: 0px auto;
     text-align: center;
-    padding: 3em;
+    padding: 1em;
     background-color: #fff;
+}
+
+#wrapper {
+    margin: 0px;
+    padding: 3em;
+
 }
 
 #firstcol {
-    margin-right:  40%;
+    margin-left:5%;
+    width:50%;
     background-color: #fff;
+    float:left;
     text-align: left;
-    padding: 3em;
 }
 
 #secondcol {
-    float: right;
-    width: 40%;
+    margin-left:60%;
     background-color: #fff;
     text-align: left;
-    padding: 3em;
 }
-
-
 
 a {
     color: #0091C9;
@@ -75,7 +76,7 @@ div.header {
 
 h1 {
     color: #2E2E2E;
-    font-size: 2.5em;
+    font-size: 2.0em;
     display: table-cell;
     vertical-align: middle;
 }
