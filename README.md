@@ -1,4 +1,5 @@
-resonance-www
+Resonance Website 
 =============
 
-Resonance webpage
+For deploying html code, run:
+`sudo sh deploy.sh`
