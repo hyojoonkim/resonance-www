@@ -33,23 +33,28 @@
 <div id="wrapper">
   <div id="firstcol">
     <h2>About Resonance</h2>
-    <p> Resonance is an OpenFlow controller that permits event-driven network
-    control.  Event-driven network control makes networks easier to manage by
-    automating many tasks that are currently performed by manually modifying
-    multiple distributed device configuration files, which are expressed in
-    low-level, vendor-specific CLI commands.</p>
+    <p> Resonance is an SDN control platform that advocates event-driven
+    network control.  Resonance makes networks easier to
+    manage by automating many tasks that are currently performed by manually
+    modifying multiple distributed device configuration files in face of
+    various network events, which are expressed in low-level, vendor-specific
+    CLI commands.</p>
 
-    <p> Resonance can support policies that automatically react to a wide range of
-    events, from fluctuations in traffic volumes to changes in the time of day.
-    Resonance allows network operators to specify network-wide policies in
-    terms of a high-level, event-driven policy model, as opposed to configuring
-    individual network devices with low-level commands.</p>
+    <p>Resonance supports policies that automatically react to a broader range
+    of network events, like fluctuations of traffic volumes, intrusion
+    detection, user authenticated, or even change in time-of-day.  Resonance
+    uses a Finite State Machine (FSM) model to express such operational tasks;
+    states represent different actions or behavior depending on network
+    condition, and transitions between states represent reaction to dynamic
+    network events.  </p>
 
+    <!--
     <p> <em>uCap</em> is a data cap usage management tool for home network
     users, which uses OpenFlow and OpenWRT.  uCap uses the Resonance controller
     for traffic engineering in home networks. For more information on uCap,
     please visit <a href="http://projectbismark.net/ucap/" target="_blank">this
     site</a>.</p>
+    --!>
 
     <h2>Learn More about Resonance</h2>
     <p> The talk below describes an early version of Resonance,
@@ -59,7 +64,20 @@
     src="http://www.youtube.com/embed/vn-tCq6ihmQ" frameborder="0"
     allowfullscreen></iframe></p>
 
-    <h2>Related Papers</h2>
+    <h2>News</h2>
+      <ul>
+        <li>Peter Phaal, inventor of sFlow, posted a <a
+        href="http://blog.sflow.com/2013/08/frenetic-pyretic-and-resonance.html"
+        target="_blank">blog post on using PyResonance with sFlow</a>.
+        </li>
+
+        <li>PyResonance was featured in the <a
+        href="https://www.coursera.org/course/sdn" target="_blank">"Software
+        Defined Networking" course in Coursera</a>.
+        </li>
+      </ul>
+
+    <h2>Related Publications</h2>
       <ul>
         <li><em>Lithium: Event-Driven Network Control</em><br>
             H. Kim, A. Voellmy, S. Burnett, N. Feamster, R. Clark.</em><br>
@@ -84,10 +102,11 @@
   </div>
   <div id="secondcol">
     <h2>PyResonance</h2>
-    <p> PyResonance is <b>Resonance implemented in <a
+    <p> PyResonance is <b>Resonance implemented with <a
     href="http://www.frenetic-lang.org/pyretic/" target="_blank">Pyretic</a></b>.
     Originally, Resonance was implemented in the NOX platform (specifically, in
     C++).
+    <!--
     However, programming in the NOX platform is a non-trivial process. Even
     building the simplest controller program requires multiple steps for
     setting up the correct environment while the platform does not provide any useful
@@ -95,42 +114,50 @@
     is low in general for NOX controller programs.  Hence, NOX sets a high bar
     for anyone (e.g., operators, researchers) who wants to implement or
     understand a Resonance controller with complex policies.</p>
-
-    <p> In contrast, Pyretic provides a programmer-friendly environment with
-    high-level APIs and a domain-specific language embedded in Python. We have
-    augmented the original Pyretic code base with many useful features to
-    present an attractive and engaging environment for implementing Resonance
-    controllers. Moreover, Pyretic's modular programming model allows
-    programmers to build a complex network policy by composing multiple network
-    policies together (sequential or parallel).</p>
+    --!>
+    Pyretic provides a better programmer-friendly environment with
+    high-level APIs, libraries, and constructs. Pyretic's composition operators
+    (parallel and sequential) add great value for composing modular programs.
+    We have augmented the original Pyretic code base with many useful features
+    to present an attractive and engaging environment for implementing
+    Resonance controllers. </p>
     
-    <p>PyResonance opens a
-    great opportunity to express and enforce network policies that were not
-    easy, if not impossible, in a much simpler fashion with significantly less
-    number of lines of code.</p>
+    <p>
+    Using PyResonance, programmers can implement and enforce a complex,
+    network-wide policy by composing multiple finite state machine based
+    network tasks together with composition operators.  PyResonance also
+    great for federated network management, where multiple operators are in
+    charge of different parts of the network in enterprise or campus networks.
+    </p>
+    
+    <p>PyResonance opens a great opportunity to express and enforce network
+    policies that were not easy, if not impossible, in a much simpler fashion
+    with significantly less number of lines of code.</p>
 
     <h2>Code and Documentation</h2>
       <ul>
-        <li><a href="https://github.com/Resonance-SDN/" target="_blank">PyResonance Github Organization</a></li>
+        <li><a href="https://github.com/Resonance-SDN/pyresonance" target="_blank">PyResonance Code in GitHub</a></li>
         <li><a href="https://github.com/Resonance-SDN/pyresonance/wiki" target="_blank">PyResonance Wiki and Documentation</a></li>
       </ul>
 
     <h2>Support & Questions</h2>
     <!--  <li><a href="http://" target="_blank">Mailing list</a></li> --!>
-    <p> For any questions, please contact Hyojoon (Joon) Kim via email: <b>joonk AT gatech DOT edu</b>
+    <p> For any questions, please contact Hyojoon (Joon) Kim via email:<br><b>joonk AT gatech DOT edu</b>
     <h2>People</h2>
       <ul>
         <li>Current contributors</li>
         <ul>
           <li><a href="http://www.cc.gatech.edu/~hkim368/" target="_blank">Hyojoon Kim</a></li>
           <li><a href="http://www.cc.gatech.edu/~agupta80/" target="_blank">Arpit Gupta</a></li>
+          <li><a href="http://www.cc.gatech.edu/grads/m/mshahbaz/" target="_blank">Muhammad Shahbaz</a></li>
+          <li><a href="http://www.cs.princeton.edu/~jreich/" target="_blank">Joshua Reich</a></li>
           <li><a href="http://www.cc.gatech.edu/~feamster/" target="_blank">Nick Feamster</a></li>
       	  <li><a href="http://www.cc.gatech.edu/fac/Russell.Clark/" target="_blank">Russ Clark</a></li>
         </ul>
         <li>Former contributors</li>
         <ul>
   	      <li><a href="http://haskell.cs.yale.edu/people/andreas-voellmy/" target="_blank">Andreas Voellmy</a></li>
-          <li><a href="http://www.cc.gatech.edu/~marshini/" target="_blank">Marshini Chetty</a></li>
+          <li><a href="http://marshini.net/" target="_blank">Marshini Chetty</a></li>
       <!--    <li><a href="http://www.cs.princeton.edu/~jreich/">Joshua Reich</a> (Postdoc, Princeton)</li> -->     <ul>
       </ul>
 
