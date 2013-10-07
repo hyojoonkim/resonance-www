@@ -41,11 +41,11 @@
     CLI commands.</p>
 
     <p>Resonance supports policies that automatically react to a broader range
-    of network events, like fluctuations of traffic volumes, intrusion
+    of network events, like fluctuation of traffic volume, intrusion
     detection, user authenticated, or even change in time-of-day.  Resonance
     uses a Finite State Machine (FSM) model to express such operational tasks;
     states represent different actions or behavior depending on network
-    condition, and transitions between states represent reaction to dynamic
+    condition, and transitions between states represent reactions to dynamic
     network events.  </p>
 
     <!--
@@ -115,28 +115,34 @@
     for anyone (e.g., operators, researchers) who wants to implement or
     understand a Resonance controller with complex policies.</p>
     --!>
-    Pyretic provides a better programmer-friendly environment with
-    high-level APIs, libraries, and constructs. Pyretic's composition operators
-    (parallel and sequential) add great value for composing modular programs.
-    We have augmented the original Pyretic code base with many useful features
-    to present an attractive and engaging environment for implementing
-    Resonance controllers. </p>
+    Pyretic provides a better programmer-friendly environment with high-level
+    APIs, libraries, and constructs. Pyretic's composition operators (parallel
+    and sequential) add great value by enabling composition of multiple modular
+    network programs.  PyResonance is built on top of Pyretic, presenting an
+    attractive and engaging environment for implementing Resonance-based controllers.
+    </p>
     
     <p>
     Using PyResonance, programmers can implement and enforce a complex,
-    network-wide policy by composing multiple finite state machine based
-    network tasks together with composition operators.  PyResonance also
-    great for federated network management, where multiple operators are in
-    charge of different parts of the network in enterprise or campus networks.
+    network-wide policy that can dynamically change network behavior based on
+    various types of network events. Using composition operators, it is also
+    possible to compose multiple finite state machine based network tasks
+    together.
+    
+    PyResonance supports federated network management, where multiple
+    operators are in charge of different parts of an enterprise or campus
+    network.
     </p>
     
-    <p>PyResonance opens a great opportunity to express and enforce network
-    policies that were not easy, if not impossible, in a much simpler fashion
-    with significantly less number of lines of code.</p>
-
     <h2>Code and Documentation</h2>
       <ul>
         <li><a href="https://github.com/Resonance-SDN/pyresonance" target="_blank">PyResonance Code in GitHub</a></li>
+        <li>PyResonance pre-pacakaged VM
+          <ul>
+            <li><a href="http://resonance.noise.gatech.edu/data/PyResonance_0.1.0_32bit.ova" target="_blank">32-bit Virtualbox VM</a></li>
+            <li><a href="http://resonance.noise.gatech.edu/data/PyResonance_0.1.0_64bit.ova" target="_blank">64-bit Virtualbox VM</a></li>
+          </ul>
+        </li>
         <li><a href="https://github.com/Resonance-SDN/pyresonance/wiki" target="_blank">PyResonance Wiki and Documentation</a></li>
       </ul>
 
