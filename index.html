@@ -71,7 +71,7 @@
         target="_blank">blog post on using PyResonance with sFlow</a>.
         </li>
 
-        <li>PyResonance was featured in the <a
+        <li>Resonance was featured in the <a
         href="https://www.coursera.org/course/sdn" target="_blank">"Software
         Defined Networking" course in Coursera</a>.
         </li>
@@ -79,6 +79,12 @@
 
     <h2>Related Publications</h2>
       <ul>
+        <li><em>Improving Network Management with Software Defined Networking</em><br>
+            H. Kim, N. Feamster.</em><br>
+            <em>IEEE Communications Magazine. Feburary, 2013.</em>
+            [<a href="http://www.cc.gatech.edu/~hkim368/publication/SDN_ieeemagazine_Kim.pdf" target="_blank">.pdf</a>]
+        </li>
+
         <li><em>Lithium: Event-Driven Network Control</em><br>
             H. Kim, A. Voellmy, S. Burnett, N. Feamster, R. Clark.</em><br>
             <em>Tech Report</em>
@@ -101,8 +107,8 @@
 
   </div>
   <div id="secondcol">
-    <h2>PyResonance</h2>
-    <p> PyResonance is <b>Resonance implemented with <a
+    <h2>Kinetic</h2>
+    <p> Kinetic is <b>Resonance implemented with <a
     href="http://www.frenetic-lang.org/pyretic/" target="_blank">Pyretic</a></b>.
     Originally, Resonance was implemented in the NOX platform (specifically, in
     C++).
@@ -118,32 +124,41 @@
     Pyretic provides a better programmer-friendly environment with high-level
     APIs, libraries, and constructs. Pyretic's composition operators (parallel
     and sequential) add great value by enabling composition of multiple modular
-    network programs.  PyResonance is built on top of Pyretic, presenting an
+    network programs.  Kinetic is built on top of Pyretic, presenting an
     attractive and engaging environment for implementing Resonance-based controllers.
     </p>
     
     <p>
-    Using PyResonance, programmers can implement and enforce a complex,
+    Using Kinetic, programmers can implement and enforce a complex,
     network-wide policy that can dynamically change network behavior based on
     various types of network events. Using composition operators, it is also
     possible to compose multiple finite state machine based network tasks
     together.
+    </p>
     
-    PyResonance supports federated network management, where multiple
-    operators are in charge of different parts of an enterprise or campus
-    network.
+    <p>
+    Kinetic supports verification of network policies using the <a
+    href="http://nusmv.fbk.eu/" target="_blank">NuSMV symbolic model
+    checker</a>. Kinetic automatically generates a NuSMV input from the program
+    written by the programmer/operator, and verifies logic statements written
+    in <a href="http://en.wikipedia.org/wiki/Computation_tree_logic"
+    target="_blank">CTL (Computation Tree Logic)</a>.
     </p>
     
     <h2>Code and Documentation</h2>
       <ul>
-        <li><a href="https://github.com/Resonance-SDN/pyresonance" target="_blank">PyResonance Code in GitHub</a></li>
-        <li>PyResonance pre-pacakaged VM
+        <li><a href="https://github.com/frenetic-lang/pyretic/tree/kinetic" target="_blank">Kinetic Code in GitHub (Branch "kinetic" in Pyretic repository)</a></li>
+<!--        <li>PyResonance pre-pacakaged VM
           <ul>
             <li><a href="http://resonance.noise.gatech.edu/data/PyResonance_0.2.0_32bit.ova" target="_blank">32-bit Virtualbox VM</a></li>
             <li><a href="http://resonance.noise.gatech.edu/data/PyResonance_0.2.0_64bit.ova" target="_blank">64-bit Virtualbox VM</a></li>
           </ul>
+--!>         
         </li>
+<!-- 
         <li><a href="https://github.com/Resonance-SDN/pyresonance/wiki" target="_blank">PyResonance Wiki and Documentation</a></li>
+
+--!>         
       </ul>
 
     <h2>Support & Questions</h2>
